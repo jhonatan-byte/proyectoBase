@@ -119,9 +119,8 @@ public class CarServiceImpl implements CarService {
 
         if (car.isPresent()){
 
-
-
-            log.info("carro encontrado , inicio de barrado");
+            log.info("carro encontrado ");
+            log.info("carro borrado");
             repository.delete(car.get());
 
             ResponseDto responseDto = ResponseDto.builder()
@@ -135,7 +134,6 @@ public class CarServiceImpl implements CarService {
                 .build();
         log.info("carro no fue encontrado");
 
-        log.info("prueba");
         return responseDto;
     }
 
