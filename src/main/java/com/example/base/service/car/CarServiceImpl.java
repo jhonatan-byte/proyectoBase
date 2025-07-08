@@ -67,6 +67,7 @@ public class CarServiceImpl implements CarService {
             return carDto;
 
         }
+        log.info("el auto no existe");
 
         throw BusinessException.Type.autoNotFound("Auto no existe");
 
